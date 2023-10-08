@@ -1,0 +1,469 @@
+[
+      {
+        "name": "Resurgence",
+        "description": "Refers to a revival or comeback.",
+        "example": "There has been a resurgence of interest in traditional craftsmanship."
+      },
+ 
+
+      {
+        "name": "Ample",
+        "description": "Describing an abundant or sufficient quantity.",
+        "example": "There is ample evidence to support the theory."
+      },
+
+
+ 
+
+
+      {
+        "name": "Endowed",
+        "description": "Naturally gifted with a particular quality, ability, or talent.",
+        "example": "She was endowed with a remarkable talent for storytelling."
+      },
+      {
+        "name": "Egress",
+        "description": "The act of exiting or going out.",
+        "example": "The emergency exit provides a safe egress in case of fire."
+      },
+
+
+
+
+
+
+      {
+        "name": "Spike",
+        "description": "A sudden and significant increase.",
+        "example": "There was a spike in the number of COVID-19 cases after the holiday season."
+      },
+      {
+        "name": "Plummet",
+        "description": "A sudden and steep decrease.",
+        "example": "The stock market plummeted following the economic crisis."
+      },
+      {
+        "name": "Fluctuate",
+        "description": "To vary or change irregularly.",
+        "example": "The prices of commodities often fluctuate based on market conditions."
+      },
+      {
+        "name": "Skyrocket",
+        "description": "To increase rapidly and significantly.",
+        "example": "The demand for renewable energy sources has skyrocketed in recent years."
+      },
+      {
+        "name": "Trend",
+        "description": "A general direction in which something is developing or changing.",
+        "example": "The trend towards urbanization is a global phenomenon."
+      },
+      {
+        "name": "Catalyst",
+        "description": "A factor that causes or speeds up a change or event.",
+        "example": "The invention of the internet acted as a catalyst for the digital revolution."
+      },
+      {
+        "name": "Ramify",
+        "description": "To divide or spread into branches or consequences.",
+        "example": "The decision to relocate the company will ramify across various departments."
+      },
+      {
+        "name": "Precursor",
+        "description": "Something that precedes and indicates the approach of something else.",
+        "example": "The precursor to technological innovation is often research and development."
+      },
+ {
+        "name": "Convenient",
+        "description": "Suitable for a particular purpose and easy to use or access.",
+        "example": "Online shopping is convenient for people with busy schedules."
+      },
+
+      {
+        "name": "Anticipation",
+        "description": "The act of looking forward to or expecting something with excitement.",
+        "example": "The anticipation of a vacation can be as enjoyable as the trip itself."
+      },
+      {
+        "name": "Debilitating",
+        "description": "Weakening or making someone less effective, physically or mentally.",
+        "example": "The debilitating illness left him unable to work for months."
+      },
+      {
+        "name": "Pragmatic",
+        "description": "Dealing with things sensibly and realistically in a way that is based on practical rather than theoretical considerations.",
+        "example": "Taking a pragmatic approach, she focused on solving the immediate problem."
+      },
+      {
+        "name": "Accolade",
+        "description": "An expression of praise, admiration, or approval.",
+        "example": "Winning the prestigious award was a well-deserved accolade for her achievements."
+      },
+      {
+        "name": "Ruminate",
+        "description": "To think deeply or reflect on something.",
+        "example": "She took some time to ruminate on the implications of the decision."
+      },
+      {
+        "name": "Stagnation",
+        "description": "The state of not moving or making progress; lack of development or growth.",
+        "example": "Economic stagnation can lead to unemployment and social problems."
+      },
+      {
+        "name": "Procrastination",
+        "description": "The habit of delaying or postponing tasks and responsibilities.",
+        "example": "Overcoming procrastination is essential for productivity."
+      },
+      {
+        "name": "Hesitation",
+        "description": "A pause or delay in taking action or making a decision.",
+        "example": "Her hesitation in accepting the job offer cost her the opportunity."
+      },
+      {
+        "name": "Delude",
+        "description": "To make someone believe something that is not true; to deceive or mislead.",
+        "example": "He attempted to delude her into thinking he had completed the project."
+      },
+      {
+        "name": "Predicament",
+        "description": "A difficult or challenging situation with no easy solution.",
+        "example": "Being caught in a traffic jam put him in a predicament as he was running late."
+      },
+      {
+        "name": "Insatiable",
+        "description": "Having an unquenchable desire or appetite for something; unable to be satisfied.",
+        "example": "His insatiable curiosity drove him to explore new fields of knowledge."
+      },
+      {
+        "name": "Immaculate",
+        "description": "Perfectly clean, tidy, or free from flaws.",
+        "example": "The hotel room was in immaculate condition when they arrived."
+      },
+      {
+        "name": "Amicable",
+        "description": "Characterized by friendliness and a peaceful attitude, even in the presence of differences.",
+        "example": "Despite their political disagreements, they maintained an amicable relationship."
+      },
+      {
+        "name": "Animosity",
+        "description": "Strong hostility or intense dislike toward someone.",
+        "example": "Years of rivalry had fostered deep animosity between the two teams."
+      },
+      {
+        "name": "Stark",
+        "description": "Sharply clear; easily understood due to a lack of ambiguity.",
+        "example": "The stark contrast between the two options made the decision easy."
+      },
+      {
+        "name": "Adhere",
+        "description": "To stick to or follow a course of action or belief.",
+        "example": "She always adheres to her ethical principles, regardless of the circumstances."
+      },
+      {
+        "name": "Adverse",
+        "description": "Unfavorable or harmful in nature; opposing one's interests.",
+        "example": "The adverse effects of pollution on human health are well-documented."
+      },
+      {
+        "name": "Sedentary",
+        "description": "Relating to a lifestyle characterized by prolonged periods of sitting and physical inactivity.",
+        "example": "A sedentary lifestyle can lead to various health problems, including obesity."
+      },
+      {
+        "name": "Prognosticated",
+        "description": "Predicted or forecasted, often based on available evidence or information.",
+        "example": "The meteorologist prognosticated heavy rainfall for the weekend."
+      },
+      {
+        "name": "Resistance",
+        "description": "The act of opposing or refusing to accept or comply with something.",
+        "example": "There was strong resistance to the proposed changes in the company's policies."
+      },
+      {
+        "name": "Prolific",
+        "description": "Producing a large quantity of something, often creative works or results.",
+        "example": "The prolific author published numerous novels and essays throughout her career."
+      },
+      {
+        "name": "Ramification",
+        "description": "The consequences or results of an action, decision, or event.",
+        "example": "The ramification of the new policy had far-reaching effects on the economy."
+      },
+      {
+        "name": "Implications",
+        "description": "The indirect or suggested meaning or consequences of something.",
+        "example": "The implications of the research findings raised questions about future possibilities."
+      },
+      {
+        "name": "Proliferation",
+        "description": "A rapid and widespread increase in the quantity or number of something.",
+        "example": "The proliferation of social media has transformed communication patterns."
+      },
+      {
+        "name": "Deteriorate",
+        "description": "To become progressively worse in quality or condition over time.",
+        "example": "Neglect can cause historical buildings to deteriorate and decay."
+      },
+      {
+        "name": "Portent",
+        "description": "A sign or omen that is believed to predict or foreshadow a significant event, often negative.",
+        "example": "The dark clouds and lightning were seen as a portent of an approaching storm."
+      },
+      {
+        "name": "Concur",
+        "description": "To agree or express agreement with a particular statement or opinion.",
+        "example": "Most scientists concur that climate change poses a significant threat to the planet."
+      },
+      {
+        "name": "Expedient",
+        "description": "Suitable or appropriate for a particular purpose, often in a practical sense.",
+        "example": "While implementing strict safety measures is expedient, it may not address the root cause of accidents."
+      },
+      {
+        "name": "Bolster",
+        "description": "To support, strengthen, or reinforce something.",
+        "example": "The additional evidence served to bolster the argument for stricter regulations."
+      },
+      {
+        "name": "Circumspect",
+        "description": "Wary, cautious, and attentive to potential risks or consequences.",
+        "example": "She approached the unfamiliar situation with a circumspect attitude, considering all possible outcomes."
+      },
+      {
+        "name": "Engender",
+        "description": "To cause or give rise to a particular situation, condition, or feeling.",
+        "example": "The economic downturn engendered widespread job losses and financial hardship."
+      },
+      {
+        "name": "Ephemeral",
+        "description": "Lasting for a very short time; transient or fleeting.",
+        "example": "The beauty of a rainbow is ephemeral, fading away quickly after a rain shower."
+      },
+
+      {
+        "name": "Pernicious",
+        "description": "Causing great harm or destruction, often in a subtle or gradual manner.",
+        "example": "The pernicious influence of addiction can destroy lives and relationships."
+      },
+      {
+        "name": "Quintessential",
+        "description": "Representing the most perfect or typical example of something.",
+        "example": "The Taj Mahal is often regarded as the quintessential symbol of architectural beauty."
+      },
+      {
+        "name": "Stifle",
+        "description": "To suppress or prevent something from developing, growing, or progressing.",
+        "example": "The strict regulations threatened to stifle innovation in the industry."
+      },
+      {
+        "name": "Ubiquitous",
+        "description": "Seemingly present everywhere or widely and constantly encountered.",
+        "example": "Smartphones have become ubiquitous in modern society, with almost everyone owning one."
+      },
+      {
+        "name": "Supersede",
+        "description": "To replace or take the place of something or someone that is considered outdated or no longer effective.",
+        "example": "Digital cameras have largely superseded film cameras in photography."
+      },
+      {
+        "name": "Dubious",
+        "description": "Doubtful, uncertain, or questionable in nature; arousing suspicion.",
+        "example": "The dubious quality of the product raised concerns among consumers."
+      },
+      {
+        "name": "Daunting",
+        "description": "Intimidating or discouraging due to its difficulty or enormity.",
+        "example": "The challenging task ahead seemed daunting, but they were determined to tackle it."
+      },
+      {
+        "name": "Assert",
+        "description": "To state or declare something confidently and forcefully.",
+        "example": "She had to assert her authority as the team leader to maintain discipline."
+      },
+      {
+        "name": "Skeptical",
+        "description": "Doubtful or inclined to question the truth or validity of something.",
+        "example": "He was skeptical of the new product's claims until he saw concrete evidence of its effectiveness."
+      },
+
+      {
+        "name": "Ineluctable",
+        "description": "Unavoidable or inescapable, often used to describe a situation or outcome that cannot be prevented.",
+        "example": "The ineluctable truth is that all living things eventually face mortality."
+      },
+      {
+        "name": "Compelling",
+        "description": "Having a strong and persuasive impact; convincing or captivating.",
+        "example": "The compelling argument swayed the jury in favor of the defendant."
+      },
+      {
+        "name": "Implacable",
+        "description": "Unyielding, merciless, or impossible to soothe or satisfy.",
+        "example": "The conflict between the two nations had escalated to the point of implacable hostility."
+      },
+      {
+        "name": "Contention",
+        "description": "A disagreement or dispute between individuals or groups.",
+        "example": "The contention between labor unions and management led to a strike."
+      },
+      {
+        "name": "Minutiae",
+        "description": "Small or minor details, often of a complex or intricate nature.",
+        "example": "The lawyer was well-versed in the legal minutiae of the case."
+      },
+      {
+        "name": "Notion",
+        "description": "An idea, concept, or belief about something.",
+        "example": "The notion that happiness comes from within is a common theme in self-help literature."
+      },
+      {
+        "name": "Erudition",
+        "description": "Extensive knowledge or learning, often in a particular field or subject.",
+        "example": "His erudition in the field of physics made him a respected scholar."
+      },
+      {
+        "name": "Burgeon",
+        "description": "To grow or flourish rapidly; to expand or develop quickly.",
+        "example": "The city began to burgeon with new businesses and cultural institutions."
+      },
+      {
+        "name": "Discern",
+        "description": "To perceive or recognize something, often with great clarity or accuracy.",
+        "example": "She could discern the subtle differences between the two paintings."
+      },
+      {
+        "name": "Realm",
+        "description": "A domain or area of interest, knowledge, or activity; a particular field or sphere.",
+        "example": "The realm of science fiction explores futuristic technologies and alternate realities."
+      },
+      {
+        "name": "Impetus",
+        "description": "A force or stimulus that encourages or motivates action or change.",
+        "example": "The discovery of a potential cure for the disease provided the impetus for further research."
+      },
+      {
+        "name": "Unprecedented",
+        "description": "Never before seen or experienced; unique or without historical precedent.",
+        "example": "The level of public interest in the event was unprecedented, with record-breaking attendance."
+      },
+      {
+        "name": "Vicissitude",
+        "description": "An unfortunate change or variation in circumstances, often referring to the ups and downs of life.",
+        "example": "Life is full of vicissitudes, and one must adapt to the changing tides."
+      },
+      {
+        "name": "Tantalizing",
+        "description": "Exciting or tempting, often by arousing a strong desire or curiosity.",
+        "example": "The tantalizing aroma of freshly baked bread drew people into the bakery."
+      },
+      {
+        "name": "Preposterous",
+        "description": "Absurd, outrageous, or contrary to reason or common sense.",
+        "example": "The idea that the Earth is flat is preposterous, as it contradicts scientific evidence."
+      },
+      {
+        "name": "Masquerade",
+        "description": "To pretend to be someone or something that one is not; to assume a false identity or appearance.",
+        "example": "He decided to masquerade as a waiter to gain access to the exclusive party."
+      },
+      {
+        "name": "Volition",
+        "description": "The power of making choices or decisions by one's own will or intention.",
+        "example": "She joined the organization of her own volition, driven by a desire to make a difference."
+      },
+      {
+        "name": "Imprudence",
+        "description": "Carelessness or a lack of caution, often resulting in unwise or risky decisions.",
+        "example": "The imprudence of his financial decisions led to bankruptcy."
+      },
+      {
+        "name": "Admonish",
+        "description": "To warn or reprimand someone firmly; to caution or advise against something.",
+        "example": "The teacher had to admonish the students for their disruptive behavior."
+      },
+      {
+        "name": "Enigmatic",
+        "description": "Mysterious, puzzling, or difficult to understand; often related to something or someone that is secretive.",
+        "example": "The enigmatic smile on her face left everyone wondering about her true feelings."
+      },
+      {
+        "name": "Environs",
+        "description": "The surrounding area or region of a particular place; the nearby vicinity.",
+        "example": "The natural beauty of the environs attracted many hikers and nature enthusiasts."
+      },
+      {
+        "name": "Elude",
+        "description": "To escape or avoid danger, typically in a clever or cunning manner; to evade or dodge.",
+        "example": "The fugitive managed to elude capture by hiding in a remote cabin."
+      },
+      {
+        "name": "Incur",
+        "description": "To become subject to something unpleasant or problematic as a result of one's actions or behavior.",
+        "example": "He incurred heavy financial losses due to his reckless spending habits."
+      },
+      {
+        "name": "Epitome",
+        "description": "The perfect or most typical example of a particular quality or type.",
+        "example": "The Grand Canyon is often considered the epitome of natural beauty."
+      },
+      {
+        "name": "Imminent",
+        "description": "About to happen or occur very soon; forthcoming in the immediate future.",
+        "example": "The imminent arrival of a major snowstorm prompted residents to prepare."
+      },
+      {
+        "name": "Guile",
+        "description": "Cunning intelligence or craftiness, often used to deceive or manipulate others.",
+        "example": "The spy relied on his guile and deception to infiltrate the enemy's ranks."
+      },
+      {
+        "name": "Appalling",
+        "description": "Causing shock, horror, or extreme dismay; terrible or horrifying in nature.",
+        "example": "The conditions in the war-torn region were truly appalling, with widespread suffering."
+      },
+      {
+        "name": "Peril",
+        "description": "The immediate and serious danger or risk of harm, injury, or destruction.",
+        "example": "The shipwrecked sailors faced the peril of being stranded on a deserted island."
+      },
+      {
+        "name": "Entrenched",
+        "description": "Deeply ingrained, firmly established, or difficult to change, often referring to habits or beliefs.",
+        "example": "The cultural traditions of the community were deeply entrenched and passed down through generations."
+      },
+      {
+        "name": "Inextricably",
+        "description": "In a manner that is impossible to separate or disentangle.",
+        "example": "Their fates were inextricably linked by the shared experience of survival."
+      },
+      {
+        "name": "Depredation",
+        "description": "The act of attacking, plundering, or causing destruction, often related to animals or invaders.",
+        "example": "The depredation of the invading army left the town in ruins."
+      },
+      {
+        "name": "Convalesce",
+        "description": "To recover from illness or injury by gradually regaining health and strength.",
+        "example": "After a long illness, he needed time to convalesce before returning to work."
+      },
+      {
+        "name": "Susceptible",
+        "description": "Vulnerable to or easily influenced by something, often a negative influence or condition.",
+        "example": "Elderly individuals are more susceptible to respiratory infections."
+      },
+      {
+        "name": "Delirious",
+        "description": "In a state of extreme excitement, joy, or confusion, often as a result of fever or intoxication.",
+        "example": "After winning the championship, the fans were delirious with joy."
+      },
+      {
+        "name": "Fervid",
+        "description": "marked by great passion or zeal",
+        "example": "The inventor’s fervid imagination allowed him to create many wonderful products."
+      },
+      {
+        "name": "insinuate",
+        "description": "to suggest, without being direct, that something unpleasant is true \n to express but not directly state something",
+        "example": "During the debate, the senator tried to insinuate his opponent was not qualified for office"
+      }
+    ]
+  

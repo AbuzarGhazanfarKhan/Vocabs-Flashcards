@@ -1,38 +1,166 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Scale Animation */
+.scale-in {
+  animation: scale-in 0.5s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
+/* Flashcard Container Styles */
+.heighty{
+  width: 400px;
+  height: 200px;
+}
+.flashcard-container {
+  width: 700px;
+  height: 500px;
+  perspective: 1000px;
+  margin: 0 auto;
+  border-radius: 30px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/* Flashcard Styles */
+.flashcard {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+  margin-block: 30px;
+  border-radius: 30px;
+  
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Front of Flashcard */
+.flashcard-front,
+.flashcard-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5rem;
   color: white;
+  border-radius: 30px;
+}
+.flashcard-front{
+  background: #4568DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+/* Back of Flashcard */
+.flashcard-back {
+  transform: rotateY(180deg);
+  background: #41295a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+/* Flip-in Animation */
+.flip-in {
+  animation: flip-in 0.5s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes flip-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Name Animation */
+.name {
+  animation: name-fade-in 0.5s ease-in-out;
+}
+
+@keyframes name-fade-in {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
+}
+
+/* Description Animation */
+.description {
+  animation: description-fade-in 0.5s ease-in-out;
+}
+
+@keyframes description-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Example Animation */
+.example {
+  animation: example-fade-in 0.5s ease-in-out;
+}
+
+@keyframes example-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Button Styles */
+button {
+  background: #41295a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7e35a3, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 30px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.flashcard-container {
+  /* ... (previous styles) */
+  animation: fadeIn 0.5s ease-in-out;
 }
