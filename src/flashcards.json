@@ -458,12 +458,17 @@
       {
         "name": "Fervid",
         "description": "marked by great passion or zeal",
-        "example": "The inventor’s fervid imagination allowed him to create many wonderful products."
+        "example": "The inventor`s fervid imagination allowed him to create many wonderful products."
       },
       {
         "name": "insinuate",
         "description": "to suggest, without being direct, that something unpleasant is true \n to express but not directly state something",
         "example": "During the debate, the senator tried to insinuate his opponent was not qualified for office"
+      },
+      {
+        "name": "Influx",
+        "description": "an arrival or entry of large numbers of people or things.",
+        "example": "The UN was yesterday preparing for a massive refugee influx into the border region."
       }
     ]
   

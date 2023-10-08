@@ -1,6 +1,38 @@
 .App {
   text-align: center;
 }
+
+.flashcard-enter {
+  transform: translateX(50%);
+  animation: slide-in 0.5s ease-in-out;
+}
+
+.flashcard-exit {
+  transform: translateX(-100%);
+  animation: slide-out 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(10%);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
 /* Scale Animation */
 .scale-in {
   animation: scale-in 0.5s ease-in-out;
@@ -16,29 +48,25 @@
     transform: scale(1);
   }
 }
+
+
 /* Flashcard Container Styles */
-.heighty{
-  width: 400px;
-  height: 200px;
-}
 .flashcard-container {
-  width: 700px;
-  height: 500px;
+  max-width: 60%; /* Make it responsive */
+  height: auto; /* Automatically adjust the height */
   perspective: 1000px;
   margin: 0 auto;
   border-radius: 30px;
 }
 
-
 /* Flashcard Styles */
 .flashcard {
   width: 100%;
-  height: 100%;
+  height: 500px; /* Adjust the height as needed for mobile devices */
   transform-style: preserve-3d;
   transition: transform 0.5s ease-in-out;
   margin-block: 30px;
   border-radius: 30px;
-  
 }
 
 .flashcard.flipped {
@@ -60,20 +88,21 @@
   color: white;
   border-radius: 30px;
 }
-.flashcard-front{
-  background: #4568DC;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+.flashcard-front {
+  background: #4568DC;
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+  background: linear-gradient(to right, #B06AB3, #4568DC);
 }
+
 /* Back of Flashcard */
 .flashcard-back {
   transform: rotateY(180deg);
-  background: #41295a;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #41295a;
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+  background: linear-gradient(to right, #2F0743, #41295a);
 }
+
 /* Flip-in Animation */
 .flip-in {
   animation: flip-in 0.5s ease-in-out;
@@ -132,13 +161,11 @@ background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, F
   }
 }
 
-
 /* Button Styles */
 button {
-  background: #41295a;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2F0743, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #7e35a3, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #41295a;
+  background: -webkit-linear-gradient(to right, #2F0743, #4568DC);
+  background: linear-gradient(to right, #7e35a3, #41295a);
   color: white;
   border: none;
   padding: 20px 40px;
@@ -151,6 +178,7 @@ button {
 button:hover {
   background-color: #2980b9;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -163,4 +191,20 @@ button:hover {
 .flashcard-container {
   /* ... (previous styles) */
   animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .flashcard-container {
+    width: 90%; /* Adjust the width for smaller screens */
+  }
+
+  .flashcard {
+    height: 600px; /* Adjust the height for mobile devices */
+  }
+}
+@media screen and (max-width: 430px) {
+  .flashcard-container {
+    min-width: 90%; /* Adjust the width for smaller screens */
+  }
 }
