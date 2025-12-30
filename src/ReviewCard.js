@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { scheduleCard } from "./utils/spacedRepetition";
 import { updateCardState, incrementReviewCount } from "./utils/storage";
 import "./App.css";
@@ -9,6 +9,13 @@ const ReviewCard = ({ card, cardState, onCardRated, onFinishReview }) => {
   useEffect(() => {
     setFlipped(false);
   }, [card]);
+
+  const handleRating = useCallback((rating) => {
+    const updatedState = scheduleCard(cardState, rating);
+    updateCardState(card.name, updatedState);
+    incrementReviewCount();
+    onCardRated();
+  }, [card.name, cardState, onCardRated]);
 
   useEffect(() => {
     const handleKeyPress = (e) => {
@@ -34,7 +41,7 @@ const ReviewCard = ({ card, cardState, onCardRated, onFinishReview }) => {
 
     window.addEventListener("keydown", handleKeyPress);
     return () => window.removeEventListener("keydown", handleKeyPress);
-  }, [isFlipped]);
+  }, [isFlipped, handleRating]);
 
   const handleFlip = () => {
     setFlipped(!isFlipped);
@@ -44,13 +51,6 @@ const ReviewCard = ({ card, cardState, onCardRated, onFinishReview }) => {
     const synth = window.speechSynthesis;
     const utterance = new SpeechSynthesisUtterance(card.name);
     synth.speak(utterance);
-  };
-
-  const handleRating = (rating) => {
-    const updatedState = scheduleCard(cardState, rating);
-    updateCardState(card.name, updatedState);
-    incrementReviewCount();
-    onCardRated();
   };
 
   if (!card) {
