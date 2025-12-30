@@ -7,7 +7,6 @@ const FlashcardContainer = () => {
   // const [animateName, setAnimateName] = useState(false);
 
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [prevCardIndex, setPrevCardIndex] = useState(null);
   const [animateName, setAnimateName] = useState(false);
 
   // Shuffle the flashcards array (Fisher-Yates shuffle) when the component mounts
@@ -24,14 +23,8 @@ const FlashcardContainer = () => {
     flashcardsData.push(...shuffledFlashcards);
   }, []);
 
-  useEffect(() => {
-    // Initialize the previous card index when the component mounts
-    setPrevCardIndex(currentCardIndex);
-  }, [currentCardIndex]);
-
   const nextCard = () => {
-    // Update the current card index while keeping track of the previous index
-    setPrevCardIndex(currentCardIndex);
+    // Update the current card index
     setCurrentCardIndex((prevIndex) =>
       prevIndex === flashcardsData.length - 1 ? 0 : prevIndex + 1
     );

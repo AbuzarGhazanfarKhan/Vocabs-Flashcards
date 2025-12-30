@@ -1,0 +1,191 @@
+.decks-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.decks-header {
+  margin-bottom: 40px;
+}
+
+.decks-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-top: 20px;
+}
+
+.back-button {
+  background: transparent;
+  border: none;
+  color: #667eea;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.back-button:hover {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.decks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.deck-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.deck-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.deck-header h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.deck-description {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.deck-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+}
+
+.deck-stat {
+  text-align: center;
+}
+
+.deck-stat.highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 10px;
+  color: white;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.deck-stat.highlight .stat-value {
+  color: white;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+.deck-stat.highlight .stat-label {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.deck-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.study-button,
+.practice-button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.study-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.study-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.study-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.practice-button {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.practice-button:hover {
+  background: #667eea;
+  color: white;
+}
+
+.deck-management {
+  margin-top: 50px;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.deck-management h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.reset-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+  .decks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .deck-actions {
+    flex-direction: column;
+  }
+}
