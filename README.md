@@ -1,51 +1,53 @@
-# Vocabulary Flashcards
+# Vocabulary Flashcards - Spaced Repetition App
 
-A modern vocabulary learning application built with React, featuring **spaced repetition** to help you master new words efficiently.
+A modern React-based vocabulary flashcard application with intelligent spaced repetition to help you master vocabulary efficiently.
 
-## 🌟 Features
+## Features
 
-### Spaced Repetition Learning
-- **Smart Review System**: Uses the Leitner system to schedule card reviews at optimal intervals
-- **Four Rating Options**: Grade your knowledge as Again, Hard, Good, or Easy
-- **Persistent Progress**: Your learning progress is automatically saved in your browser
-
-### Dashboard & Statistics
-- **Cards Due Today**: See how many cards need review
-- **Streak Tracking**: Keep track of your consecutive study days
-- **Review Statistics**: Monitor your daily progress and total reviews
-
-### Study Modes
-- **Review Mode**: Focus on cards that are due for review with spaced repetition scheduling
-- **Practice Mode**: Browse and study any card at your own pace
-- **Browse All Cards**: Search and explore your entire vocabulary collection
-
-### User Experience
+### 🎯 Spaced Repetition Review Mode
+- **Smart Scheduling**: Uses the Leitner system to optimize your learning
+- **Review Sessions**: Study cards that are due for review today
+- **Progress Tracking**: Cards are automatically scheduled based on your performance
 - **Keyboard Shortcuts**: 
-  - Press `Space` to flip cards
-  - Press `1-4` to rate cards in review mode
-- **Card Flip Animation**: Smooth 3D flip effect for engaging study sessions
-- **Text-to-Speech**: Hear pronunciation of vocabulary words
-- **Search & Filter**: Quickly find cards by name, description, or example
+  - `Space`: Flip card
+  - `1-4`: Rate your recall (Again/Hard/Good/Easy)
 
-## 📚 How Spaced Repetition Works
+### 📊 Dashboard
+- **Due Cards Counter**: See how many cards need review today
+- **Quick Actions**: Start Review, Browse Decks, or Practice All
+- **Statistics**: Track total cards and cards due
 
-This app uses a simplified **Leitner System** with 5 boxes:
+### 📚 Deck Management
+- **Deck Overview**: View total cards, cards due, and last studied date
+- **Multiple Study Modes**: Review mode (spaced repetition) or Practice mode (all cards)
+- **Progress Reset**: Reset all progress if you want to start fresh
 
-- **Box 1**: Review daily (new and difficult cards)
-- **Box 2**: Review every 2 days
-- **Box 3**: Review every 4 days
-- **Box 4**: Review every 8 days
-- **Box 5**: Review every 16 days
+### 🎨 Enhanced User Experience
+- **Card Flip Animation**: Smooth 3D flip effect
+- **Text-to-Speech**: Hear correct pronunciation of vocabulary
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Empty States**: Clear messages when no cards are due
 
-When you rate a card:
-- **Again** (1): Move back to Box 1, review tomorrow
-- **Hard** (2): Move back one box or stay in Box 1
-- **Good** (3): Move to the next box
-- **Easy** (4): Skip ahead two boxes
+## How Spaced Repetition Works
 
-Cards you know well are reviewed less frequently, while challenging words come up more often.
+The app uses the **Leitner system**, a proven spaced repetition method:
 
-## 🚀 Getting Started
+1. All new cards start in Box 1 (reviewed daily)
+2. After seeing a card, you rate how well you knew it:
+   - **Again (1)**: Card goes back to Box 1 (review tomorrow)
+   - **Hard (2)**: Card moves down one box
+   - **Good (3)**: Card moves up one box
+   - **Easy (4)**: Card jumps up two boxes
+3. Cards in higher boxes are reviewed less frequently:
+   - Box 1: 1 day
+   - Box 2: 3 days
+   - Box 3: 7 days
+   - Box 4: 14 days
+   - Box 5: 30 days
+
+This ensures you review difficult words more often and easy words less frequently, optimizing your study time.
+
+## Getting Started
 
 ### Installation
 
@@ -53,7 +55,7 @@ Cards you know well are reviewed less frequently, while challenging words come u
 npm install
 ```
 
-### Development
+### Running the App
 
 ```bash
 npm start
@@ -61,7 +63,7 @@ npm start
 
 Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
 
-### Production Build
+### Building for Production
 
 ```bash
 npm run build
@@ -69,47 +71,76 @@ npm run build
 
 Builds the app for production to the `build` folder.
 
-### Testing
+### Running Tests
 
 ```bash
 npm test
 ```
 
-Runs the test suite in interactive watch mode.
+Launches the test runner in interactive watch mode.
 
-## 💡 Usage Tips
+## Technology Stack
 
-1. **Start with Review Mode**: Begin each session by reviewing cards that are due
-2. **Be Honest with Ratings**: Accurate self-assessment leads to better learning
-3. **Maintain Your Streak**: Study daily to build a strong learning habit
-4. **Use Practice Mode**: When you have extra time, practice cards that aren't due yet
-5. **Search Feature**: Use the Browse view to look up specific words
+- **React 18.2**: Modern React with hooks
+- **React Router**: Client-side routing
+- **LocalStorage**: Persistent data storage
+- **Web Speech API**: Text-to-speech pronunciation
+- **CSS3**: Modern animations and gradients
 
-## 🎨 Technology Stack
+## Data Persistence
 
-- **React 18**: Modern React with hooks
-- **Create React App**: Quick setup and build tooling
-- **LocalStorage**: Client-side persistence of learning progress
-- **CSS3**: Animations and responsive design
+All your progress is automatically saved to your browser's localStorage. This includes:
+- Review schedule for each card
+- Box level (learning progress)
+- Last review date
+- Review count and lapses
 
-## 📖 Data Structure
+## Project Structure
 
-Each flashcard contains:
-- **name**: The vocabulary word
-- **description**: Definition or meaning
-- **example**: Usage in a sentence
+```
+src/
+├── pages/           # Page components (Home, Review, Decks, Practice)
+├── context/         # React context for global state
+├── utils/           # Utility functions (spaced repetition logic, storage)
+├── components/      # Reusable components (Flashcard, etc.)
+├── App.js           # Main app with routing
+└── flashcards.json  # Vocabulary data
+```
 
-Scheduling data (stored in localStorage):
-- **box**: Current Leitner box (1-5)
-- **dueDate**: Next review date
-- **lastReviewed**: Last study date
-- **repetitions**: Total number of reviews
-- **lapses**: Number of times rated as "Again"
+## Contributing
 
-## 🤝 Contributing
+Feel free to contribute by:
+- Adding more vocabulary words to `flashcards.json`
+- Improving the UI/UX
+- Adding new features
+- Fixing bugs
 
-Contributions are welcome! Feel free to submit issues or pull requests.
+---
 
-## 📄 License
+## Available Scripts (Create React App)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+

@@ -12,12 +12,21 @@ useEffect(() => {
 const handleFlip = () => {
   setFlipped(!isFlipped);
 };
-function speak() {
-   
-  const synth = window.speechSynthesis;
-  const utterance = new SpeechSynthesisUtterance(card.name);
 
-  synth.speak(utterance);
+function speak() {
+  // Check if Web Speech API is supported
+  if (!window.speechSynthesis) {
+    console.warn('Text-to-speech is not supported in this browser');
+    return;
+  }
+  
+  try {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(card.name);
+    synth.speak(utterance);
+  } catch (error) {
+    console.error('Error with text-to-speech:', error);
+  }
 }
 
 return (

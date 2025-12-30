@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { FlashcardsProvider } from "./context/FlashcardsContext";
+import Home from "./pages/Home";
+import Review from "./pages/Review";
+import Decks from "./pages/Decks";
+import Practice from "./pages/Practice";
 import "./App.css";
-import Home from "./Home";
-import ReviewSession from "./ReviewSession";
-import Browse from "./Browse";
-import FlashcardContainer from "./FlashcardContainer";
 
 function App() {
   const [currentView, setCurrentView] = useState("home");
@@ -13,18 +15,18 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {currentView === "home" && <Home onNavigate={handleNavigation} />}
-      {currentView === "review" && <ReviewSession onFinish={() => handleNavigation("home")} />}
-      {currentView === "browse" && <Browse onNavigate={handleNavigation} />}
-      {currentView === "practice" && (
-        <div>
-          <button className="back-btn" onClick={() => handleNavigation("home")}>← Back to Home</button>
-          <h1>Vocabulary Flashcards - Practice Mode</h1>
-          <FlashcardContainer />
+    <FlashcardsProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/review" element={<Review />} />
+            <Route path="/decks" element={<Decks />} />
+            <Route path="/practice" element={<Practice />} />
+          </Routes>
         </div>
-      )}
-    </div>
+      </Router>
+    </FlashcardsProvider>
   );
 }
 

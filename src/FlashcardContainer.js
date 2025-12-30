@@ -26,6 +26,7 @@ const FlashcardContainer = () => {
   }, []);
 
   const nextCard = () => {
+    // Update the current card index
     setCurrentCardIndex((prevIndex) =>
       prevIndex === shuffledCards.length - 1 ? 0 : prevIndex + 1
     );
