@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFlashcards } from '../context/FlashcardsContext';
 import './Review.css';
@@ -25,7 +25,7 @@ const Review = () => {
     setIsFlipped(!isFlipped);
   };
 
-  const handleRating = (rating) => {
+  const processRating = useCallback((rating) => {
     if (!currentCard || !isFlipped) return;
 
     updateCard(currentCard.id, rating);
@@ -37,6 +37,10 @@ const Review = () => {
     } else {
       setReviewComplete(true);
     }
+  }, [currentCard, isFlipped, currentIndex, dueCards.length, updateCard]);
+
+  const handleRating = (rating) => {
+    processRating(rating);
   };
 
   const speak = () => {
@@ -78,22 +82,14 @@ const Review = () => {
         }
         
         if (rating) {
-          updateCard(currentCard.id, rating);
-          
-          // Move to next card
-          if (currentIndex < dueCards.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-            setIsFlipped(false);
-          } else {
-            setReviewComplete(true);
-          }
+          processRating(rating);
         }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentCard, isFlipped, currentIndex, dueCards.length, updateCard]);
+  }, [currentCard, isFlipped, processRating]);
 
   if (reviewComplete || dueCards.length === 0) {
     return (

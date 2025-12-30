@@ -46,11 +46,12 @@ const calculateNextReview = (box) => {
 export const updateCard = (card, rating) => {
   const now = new Date();
   let newBox = card.box;
+  let newLapses = card.lapses || 0;
   
   switch (rating) {
     case 'again':
       newBox = 1;
-      card.lapses = (card.lapses || 0) + 1;
+      newLapses = newLapses + 1;
       break;
     case 'hard':
       newBox = Math.max(1, card.box - 1);
@@ -71,6 +72,7 @@ export const updateCard = (card, rating) => {
     dueDate: calculateNextReview(newBox).toISOString(),
     lastReviewed: now.toISOString(),
     reviewCount: (card.reviewCount || 0) + 1,
+    lapses: newLapses,
   };
 };
 
