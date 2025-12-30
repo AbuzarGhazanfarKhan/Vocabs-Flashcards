@@ -6,6 +6,22 @@ const STORAGE_KEY = 'flashcard_scheduling_data';
 const STATS_KEY = 'flashcard_stats';
 
 /**
+ * Get today's date as ISO string (YYYY-MM-DD)
+ */
+export function getTodayString() {
+  return new Date().toISOString().split('T')[0];
+}
+
+/**
+ * Get yesterday's date as ISO string (YYYY-MM-DD)
+ */
+export function getYesterdayString() {
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  return yesterday.toISOString().split('T')[0];
+}
+
+/**
  * Load all card scheduling states from localStorage
  */
 export function loadCardStates() {
@@ -85,18 +101,16 @@ export function saveStats(stats) {
  */
 export function incrementReviewCount() {
   const stats = loadStats();
-  const today = new Date().toISOString().split('T')[0];
+  const today = getTodayString();
   
   // Update streak
   if (stats.lastReviewDate === today) {
     // Same day, just increment
     stats.reviewedToday += 1;
   } else {
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().split('T')[0];
+    const yesterday = getYesterdayString();
     
-    if (stats.lastReviewDate === yesterdayStr) {
+    if (stats.lastReviewDate === yesterday) {
       // Consecutive day, increment streak
       stats.streak += 1;
     } else if (stats.lastReviewDate !== null) {

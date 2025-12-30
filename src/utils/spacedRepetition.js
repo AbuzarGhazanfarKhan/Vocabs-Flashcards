@@ -21,13 +21,20 @@ const BOXES = [
 ];
 
 /**
+ * Get today's date as ISO string (YYYY-MM-DD)
+ */
+function getTodayString() {
+  return new Date().toISOString().split('T')[0];
+}
+
+/**
  * Initialize a new card's scheduling data
  */
 export function initializeCard(cardName) {
   return {
     name: cardName,
     box: 1,
-    dueDate: new Date().toISOString().split('T')[0], // Due today
+    dueDate: getTodayString(), // Due today
     lastReviewed: null,
     repetitions: 0,
     lapses: 0,
@@ -42,7 +49,7 @@ export function initializeCard(cardName) {
  */
 export function scheduleCard(cardState, rating) {
   const today = new Date();
-  const todayStr = today.toISOString().split('T')[0];
+  const todayStr = getTodayString();
   
   let newBox = cardState.box;
   let intervalDays = 1;
@@ -95,14 +102,14 @@ export function scheduleCard(cardState, rating) {
  * Check if a card is due for review
  */
 export function isCardDue(cardState) {
-  const today = new Date().toISOString().split('T')[0];
+  const today = getTodayString();
   return cardState.dueDate <= today;
 }
 
 /**
  * Get cards that are due for review
  */
-export function getDueCards(allCardStates) {
-  const today = new Date().toISOString().split('T')[0];
-  return allCardStates.filter(card => card.dueDate <= today);
+export function getDueCards(cardStates) {
+  const today = getTodayString();
+  return cardStates.filter(card => card.dueDate <= today);
 }

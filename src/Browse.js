@@ -3,6 +3,8 @@ import flashcardsData from "./flashcards.json";
 import { loadCardStates } from "./utils/storage";
 import { initializeCard, isCardDue } from "./utils/spacedRepetition";
 
+const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
 const Browse = ({ onNavigate }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [cards, setCards] = useState([]);
@@ -46,7 +48,7 @@ const Browse = ({ onNavigate }) => {
     const date = new Date(dateStr);
     const today = new Date();
     const diffTime = date - today;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffDays = Math.ceil(diffTime / MS_PER_DAY);
     
     if (diffDays === 0) return "Today";
     if (diffDays === 1) return "Tomorrow";
