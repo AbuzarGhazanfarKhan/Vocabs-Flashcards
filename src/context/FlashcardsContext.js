@@ -20,8 +20,22 @@ export const FlashcardsProvider = ({ children }) => {
   // Initialize cards from localStorage or flashcards.json
   useEffect(() => {
     const storedCards = loadCards();
-    if (storedCards && storedCards.length > 0) {
-      setCards(storedCards);
+    // Validate stored cards structure
+    if (storedCards && Array.isArray(storedCards) && storedCards.length > 0) {
+      // Basic validation: check if cards have required properties
+      const isValid = storedCards.every(card => 
+        card && typeof card === 'object' && 
+        card.name && card.description && card.id
+      );
+      
+      if (isValid) {
+        setCards(storedCards);
+      } else {
+        // Corrupted data, reinitialize
+        const initializedCards = initializeCards(flashcardsData);
+        setCards(initializedCards);
+        saveCards(initializedCards);
+      }
     } else {
       const initializedCards = initializeCards(flashcardsData);
       setCards(initializedCards);
