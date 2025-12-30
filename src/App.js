@@ -8,6 +8,12 @@ import Practice from "./pages/Practice";
 import "./App.css";
 
 function App() {
+  const [currentView, setCurrentView] = useState("home");
+
+  const handleNavigation = (view) => {
+    setCurrentView(view);
+  };
+
   return (
     <FlashcardsProvider>
       <Router>
